@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>虚拟MBTI测试</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <div id="container">
+        <h1>虚拟MBTI人格测试</h1>
+        <p>看看你在虚拟世界中的人格类型吧！</p>
+        <button id="startBtn">开始测试</button>
+
+        <div id="quiz" style="display: none;">
+            <h2 id="question"></h2>
+            <div class="option-container">
+                <span id="leftLabel" class="option-label"></span>
+                <button onclick="selectAnswer(1)">1</button>
+                <button onclick="selectAnswer(2)">2</button>
+                <button onclick="selectAnswer(3)">3</button>
+                <button onclick="selectAnswer(4)">4</button>
+                <button onclick="selectAnswer(5)">5</button>
+                <span id="rightLabel" class="option-label"></span>
+            </div>
+            <button id="nextBtn" style="display: none;">下一题</button>
+        </div>
+
+        <div id="result" style="display: none;">
+            <h2>你的虚拟人格类型是：</h2>
+            <h3 id="mbtiType"></h3>
+            <p id="mbtiDesc"></p>
+            <button onclick="location.reload()">重新测试</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
