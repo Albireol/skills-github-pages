@@ -66,7 +66,7 @@ function calculateConsistency() {
     let diffE = Math.abs(virtualScores.E - realScores.E);
     let diffS = Math.abs(virtualScores.S - realScores.S);
     let diffT = Math.abs(virtualScores.T - realScores.T);
-    let diffJ = Math.abs(virtualScores.J - realScores.P);
+    let diffJ = Math.abs(virtualScores.J - realScores.J);
 
     let totalDifference = (diffE + diffS + diffT + diffJ) / 4;
     let consistencyScore = Math.max(0, 100 - totalDifference * 10); // 保证不低于 0
