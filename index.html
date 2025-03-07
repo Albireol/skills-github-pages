@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>虚拟MBTI测试</title>
+    <title>人格一致性测试</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
 
     <div id="container">
-        <h1>虚拟MBTI人格测试</h1>
-        <p>看看你在虚拟世界中的人格类型吧！</p>
+        <h1>人格一致性测试</h1>
+        <p>测测你的虚拟人格和现实人格的分裂程度</p>
         <button id="startBtn">开始测试</button>
 
         <div id="quiz" style="display: none;">
@@ -24,13 +24,11 @@
                 <button onclick="selectAnswer(5)">5</button>
                 <span id="rightLabel" class="option-label"></span>
             </div>
-            <button id="nextBtn" style="display: none;">下一题</button>
         </div>
 
         <div id="result" style="display: none;">
-            <h2>你的虚拟人格类型是：</h2>
-            <h3 id="mbtiType"></h3>
-            <p id="mbtiDesc"></p>
+            <h2>测试结果</h2>
+            <div id="mbtiType"></div> <!-- 这里将同时显示 虚拟 MBTI 和 现实 MBTI -->
             <button onclick="location.reload()">重新测试</button>
         </div>
     </div>

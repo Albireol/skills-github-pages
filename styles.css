@@ -1,18 +1,15 @@
-body {
-    font-family: Arial, sans-serif;
-    text-align: center;
-    background-color: #f4f4f4;
-}
-
+/* 确保整个测试容器居中 */
 #container {
-    max-width: 600px;
+    max-width: 700px;
     margin: 50px auto;
-    padding: 20px;
+    padding: 30px;
     background: white;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
     border-radius: 10px;
+    text-align: center;
 }
 
+/* 按钮样式 */
 button {
     background: #007bff;
     color: white;
@@ -21,36 +18,82 @@ button {
     cursor: pointer;
     margin-top: 20px;
     border-radius: 5px;
+    font-size: 16px;
 }
 
 button:hover {
     background: #0056b3;
 }
 
+/* 选项整体居中显示 */
 .option-container {
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    margin: 20px 0;
+    justify-content: center; /* 按钮居中 */
     gap: 10px;
+    flex-wrap: wrap; /* 允许换行，防止文字被挤出 */
+    margin: 20px 0;
 }
 
+/* 左侧 & 右侧标签 */
 .option-label {
     font-size: 14px;
-    width: 120px;
+    flex: 1;
     text-align: center;
-    white-space: nowrap;
+    white-space: normal;
+    word-break: break-word;
+    max-width: 120px;
 }
 
+/* 选项按钮 */
 .option-container button {
-    flex: 1;
+    flex: none;
+    width: 50px;
+    height: 40px;
     padding: 10px;
     border-radius: 5px;
     background: #ddd;
     cursor: pointer;
     border: 1px solid #ccc;
+    font-size: 16px;
+    text-align: center;
 }
 
+/* 选项按钮 hover 效果 */
 .option-container button:hover {
     background: #bbb;
+}
+
+/* 结果显示 */
+#result {
+    display: none;
+}
+
+/* 适配移动端 */
+@media screen and (max-width: 600px) {
+    #container {
+        max-width: 90%;
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h2 {
+        font-size: 18px;
+    }
+
+    .option-container {
+        flex-direction: column; /* 在小屏幕上选项纵向排列 */
+    }
+
+    .option-label {
+        max-width: 100%;
+    }
+
+    .option-container button {
+        width: 80px;
+        height: 45px;
+    }
 }
